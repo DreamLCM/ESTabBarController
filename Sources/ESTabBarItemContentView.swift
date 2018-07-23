@@ -201,7 +201,8 @@ open class ESTabBarItemContentView: UIView {
     }
 
     open func updateDisplay() {
-        imageView.image = (selected ? (selectedImage ?? image) : image)?.withRenderingMode(renderingMode)
+        imageView.image = (selected ? (selectedImage ?? image) : image)
+//            ?.withRenderingMode(renderingMode)
         imageView.tintColor = selected ? highlightIconColor : iconColor
         titleLabel.textColor = selected ? highlightTextColor : textColor
         backgroundColor = selected ? highlightBackdropColor : backdropColor
